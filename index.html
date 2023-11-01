@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        *{
+            overflow: hidden;
+        }
+        body{
+    /*background: linear-gradient(black, #44444454);*/
+    height: 100vh;
+background: linear-gradient(#292929, #000000)}
+    .whole{
+    width: 4460px;
+    height: 14;
+    height: 1080px;
+    overflow: visible;
+    top: 0px;
+    position: absolute;
+    }
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ffffff;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 6px;
+    /* border-radius: 6px; */
+    background: #4a4a4a;
+    /* -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.5); */
+    width: 2px;
+    /*border: 1px solid white;*/
+}
+::-webkit-scrollbar-thumb {
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(255,255,255,0.4); 
+}
+.wrapper_3_0{
+    z-index: 60 !important
+}
+.wrapper_3_4{
+    z-index: 60 !important
+}
+.wrapper_3_35{
+    z-index: 59 !important
+}
+.wrapper_3_8{
+    z-index: 87 !important
+}
+.wrapper_3_12{
+    z-index: 100 !important
+}
+.wrapper_3_39{
+    z-index: 90 !important
+}
+.wrapper_3_47{
+    z-index: 82 !important
+}
+.wrapper_3_16{
+    z-index: 83 !important
+}
+.wrapper_3_20{
+    z-index: 95 !important
+}
+.wrapper_3_24{
+    z-index: 99 !important
+}
+.wrapper_3_28{
+    z-index: 110 !important
+}
+.wrapper_3_32{
+    z-index: 135 !important
+}
+.wrapper_3_36{
+
+    z-index: 133 !important;
+}
+.wrapper_3_37{
+
+    z-index: 69 !important;
+}
+ /*   .row_0.col_1,
+    .row_0.col_2,
+    .row_0.col_5,
+    .row_0.col_8,
+    .row_0.col_11,
+    .row_0.col_20,
+    .row_0.col_23,
+    .row_0.col_26,
+    .row_0.col_25,
+    .row_0.col_29,
+    .row_5.col_2,
+    .row_5.col_5,
+    .row_5.col_8,
+    .row_5.col_11,
+    .row_5.col_20,
+    .row_5.col_23,
+    .row_5.col_26,
+    .row_5.col_29{
+        display: none;
+    }
+*/    .wrap_r .scroll{  background:gray;
+  height: 45%;
+  width: 80%;
+  position: absolute;
+  left: 10%;
+  border-radius: 100px;
+transition: 1s
+}
+    .wrap_b .scroll{  background: gray;
+  width: 45%;
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  border-radius: 100px;
+transition: 1s
+}
+
+
+
+
+        .wrapper_0{
+            z-index: 10;
+    position: absolute;
+    background-color: black;
+    border-radius: 5px;
+    /*transition:1s;*/
+    position: absolute;
+    box-shadow: 0px 0px 30px black
+    /*margin-top: 300px*/
+        }
+        .vir_scroll_wrapper{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    z-index: 0
+
+        }
+        .wrapper_0>.vir_scroll_wrapper{
+    z-index: 10000
+
+        }
+        .vir_scroll{
+            position: relative;
+            width: 100%;
+            height: 1000%}
+        .wrapper_1{
+    width: 100px;
+    height: 1980px;
+    background: #ff5305d4;
+    transform: rotate(-45deg);
+    transform-origin: left top;
+    position: absolute;
+    top: -141.4px;
+    z-index: -1;
+    display: none;
+}
+
+        .wrapper_2{
+    width: 100px;
+    height: 1980px;
+    display: none;
+    background: #878febb3;
+    transform: rotate(45deg);
+    transform-origin: left top;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    box-shadow: 0vh 0vh 50px black
+}
+.wrapper_3{
+    position: absolute;
+    transform-origin: left top;
+    z-index: 300;
+    overflow: visible;
+    overflow-y: hidden;
+    /*background: #ffbaba4f;*/
+    border-radius: 5px;
+    /*overflow: hidden;*/
+    box-shadow: 0px 0px 10px;
+    /*border-right: 2px solid #ff000066;*/
+}
+.gray{
+    background: #1e1e1eeb;
+}
+.scroll_overlay{
+    background: #00000087
+}
+.wrapper_3.rot_group_0
+.wrapper_3.rot_group_0,
+.wrapper_3.rot_group_0 .scroll_overlay{
+    background: #0000007a;
+}
+
+.wrapper_3_0.rot_group_1,
+.wrapper_3_4.rot_group_1,
+.wrapper_3_8.rot_group_1,
+.wrapper_3_12.rot_group_1,
+.wrapper_3_16.rot_group_1,
+.wrapper_3_20.rot_group_1,
+.wrapper_3_24.rot_group_1,
+.wrapper_3_28.rot_group_1,
+.wrapper_3_32.rot_group_1,
+.wrapper_3_36.rot_group_1,
+.wrapper_3_40.rot_group_1,
+.wrapper_3_44.rot_group_1,
+.wrapper_3_48.rot_group_1,
+.wrapper_3_52.rot_group_1,
+.wrapper_3_56.rot_group_1,
+.wrapper_3_60.rot_group_1,
+.wrapper_3_64.rot_group_1,
+.wrapper_3_68.rot_group_1,
+.wrapper_3_72.rot_group_1,
+.wrapper_3_76.rot_group_1,
+.wrapper_3_80.rot_group_1,
+.wrapper_3_84.rot_group_1,
+.wrapper_3_88.rot_group_1,
+.wrapper_3_92.rot_group_1,
+.wrapper_3_96.rot_group_1,
+.wrapper_3_100.rot_group_1,
+.wrapper_3_104.rot_group_1,
+.wrapper_3_108.rot_group_1,
+.wrapper_3_112.rot_group_1,
+.wrapper_3_116.rot_group_1{
+
+    background:linear-gradient(#fff09ef2 10%,#fa210d00,#fa210d00,#fff09ef2 60%)
+}
+.wrapper_3_3.rot_group_0,
+.wrapper_3_7.rot_group_0,
+.wrapper_3_11.rot_group_0,
+.wrapper_3_15.rot_group_0,
+.wrapper_3_19.rot_group_0,
+.wrapper_3_23.rot_group_0,
+.wrapper_3_27.rot_group_0,
+.wrapper_3_31.rot_group_0,
+.wrapper_3_35.rot_group_0,
+.wrapper_3_39.rot_group_0,
+.wrapper_3_43.rot_group_0,
+.wrapper_3_47.rot_group_0,
+.wrapper_3_51.rot_group_0,
+.wrapper_3_55.rot_group_0,
+.wrapper_3_59.rot_group_0,
+.wrapper_3_63.rot_group_0,
+.wrapper_3_67.rot_group_0,
+.wrapper_3_71.rot_group_0,
+.wrapper_3_75.rot_group_0,
+.wrapper_3_79.rot_group_0,
+.wrapper_3_83.rot_group_0,
+.wrapper_3_87.rot_group_0,
+.wrapper_3_91.rot_group_0,
+.wrapper_3_95.rot_group_0,
+.wrapper_3_99.rot_group_0,
+.wrapper_3_103.rot_group_0,
+.wrapper_3_107.rot_group_0,
+.wrapper_3_111.rot_group_0,
+.wrapper_3_115.rot_group_0,
+.wrapper_3_3.rot_group_0 .scroll_overlay,
+.wrapper_3_7.rot_group_0 .scroll_overlay,
+.wrapper_3_11.rot_group_0 .scroll_overlay,
+.wrapper_3_15.rot_group_0 .scroll_overlay,
+.wrapper_3_19.rot_group_0 .scroll_overlay,
+.wrapper_3_23.rot_group_0 .scroll_overlay,
+.wrapper_3_27.rot_group_0 .scroll_overlay,
+.wrapper_3_31.rot_group_0 .scroll_overlay,
+.wrapper_3_35.rot_group_0 .scroll_overlay,
+.wrapper_3_39.rot_group_0 .scroll_overlay,
+.wrapper_3_43.rot_group_0 .scroll_overlay,
+.wrapper_3_47.rot_group_0 .scroll_overlay,
+.wrapper_3_51.rot_group_0 .scroll_overlay,
+.wrapper_3_55.rot_group_0 .scroll_overlay,
+.wrapper_3_59.rot_group_0 .scroll_overlay,
+.wrapper_3_63.rot_group_0 .scroll_overlay,
+.wrapper_3_67.rot_group_0 .scroll_overlay,
+.wrapper_3_71.rot_group_0 .scroll_overlay,
+.wrapper_3_75.rot_group_0 .scroll_overlay,
+.wrapper_3_79.rot_group_0 .scroll_overlay,
+.wrapper_3_83.rot_group_0 .scroll_overlay,
+.wrapper_3_87.rot_group_0 .scroll_overlay,
+.wrapper_3_91.rot_group_0 .scroll_overlay,
+.wrapper_3_95.rot_group_0 .scroll_overlay,
+.wrapper_3_99.rot_group_0 .scroll_overlay,
+.wrapper_3_103.rot_group_0 .scroll_overlay,
+.wrapper_3_107.rot_group_0 .scroll_overlay,
+.wrapper_3_111.rot_group_0 .scroll_overlay,
+.wrapper_3_115.rot_group_0 .scroll_overlay{
+    background: linear-gradient(#fa520df2 10%,#fa210d00,#fa210d00,#fa520df2 80%)
+}
+.wrapper_3_1.rot_group_0,
+.wrapper_3_5.rot_group_0,
+.wrapper_3_9.rot_group_0,
+.wrapper_3_13.rot_group_0,
+.wrapper_3_17.rot_group_0,
+.wrapper_3_21.rot_group_0,
+.wrapper_3_25.rot_group_0,
+.wrapper_3_29.rot_group_0,
+.wrapper_3_33.rot_group_0,
+.wrapper_3_37.rot_group_0,
+.wrapper_3_41.rot_group_0,
+.wrapper_3_45.rot_group_0,
+.wrapper_3_49.rot_group_0,
+.wrapper_3_53.rot_group_0,
+.wrapper_3_57.rot_group_0,
+.wrapper_3_61.rot_group_0,
+.wrapper_3_65.rot_group_0,
+.wrapper_3_69.rot_group_0,
+.wrapper_3_73.rot_group_0,
+.wrapper_3_77.rot_group_0,
+.wrapper_3_81.rot_group_0,
+.wrapper_3_85.rot_group_0,
+.wrapper_3_89.rot_group_0,
+.wrapper_3_93.rot_group_0,
+.wrapper_3_97.rot_group_0,
+.wrapper_3_101.rot_group_0,
+.wrapper_3_105.rot_group_0,
+.wrapper_3_109.rot_group_0,
+.wrapper_3_113.rot_group_0{
+/*z-index: 0 !important*/
+}
+
+.scroll_overlay{
+    z-index: 1000000000;
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    pointer-events: none;
+    right: 0;
+    left: auto;
+}
+     .size_group_0{
+            width: 10px;
+        }
+        /*가장아래에 : 
+        row1 col1
+        row3 col9
+        row3 col11
+        row3 col13
+        ..
+        두번째아래...
+        가장 위..
+
+        */
+        img{position: absolute;}
+        .size_group_1,
+        .size_group_9,
+        .size_group_12,
+        .size_group_15,
+        .size_group_17,
+        .size_group_19,
+        .size_group_24{
+            /*width: 10px !important;*/
+        }
+        .size_group_2,
+        .size_group_6,
+        .size_group_7,
+        .size_group_10,
+        .size_group_22,
+        .size_group_16,
+        .size_group_17,
+        .size_group_20{
+            /*width: 25px !important;*/
+        }
+        .size_group_12,
+        .size_group_16,
+        .size_group_17,
+        .size_group_20,
+        .size_group_22{
+            /*width: 65px;*/
+        }
+        .wrapper_3.rot_group_0{
+            /*background : repeating-linear-gradient( to top, #3775f94d 0px, #0e91f740 39px,#ff875c38 58px ,#ff735c94 53px,#ff685c38 87px, #ffffff7d 95px, #091df640 100px)*/
+        }
+           /*
+        }
+        .size_group_3{
+            width: 140px;
+        }
+        .size_group_4{
+            width: 160px;
+        }*/
+        /*.wid_group_1{
+            width: 200px;
+        }
+        .wid_group_2{
+            width: 250px;
+        }
+        .wid_group_3{
+            width: 300px;
+        }*/
+        .rot_group_0{
+            transform-origin: left top;
+            transform: rotate(-45deg) ;
+        }
+        .rot_group_1{
+            transform-origin:left top;
+            transform: rotate(45deg) translateY(100px) translateX(100px);
+        }
+        .img_wrap{
+            width: 100%;
+            height: 300px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0
+        }
+        .img_wrap_inner{
+    position: absolute;
+    z-index: 0;
+    /* transform-origin: left top; */
+    left: 50%;
+    top: 50%;
+            width: 600%;
+            height: 600px;
+}
+img{
+    width: 1550px;
+    height: auto;
+    /*transition: 2s;*/
+    position: absolute;
+    filter: contrast(1.5) brightness(.9) saturate(1);
+    /*transform: translateY(-200px);*/
+    
+}
+.bot.wrapper_0{
+    height: 360px;
+    z-index: -1 !important
+    /*margin-top: -30px;*/
+    /*transform-origin: center 30px*/
+}
+.rot_group_0 .img_wrap_inner{
+    transform:translate(-50%, -50%)  rotate(45deg);
+}
+.rot_group_1 .img_wrap_inner{
+    transform:translate(-50%, -50%)  rotate(-45deg);
+}
+        .wrap_b{
+            height: 10px;
+            position: absolute;
+            bottom: 0;
+            box-shadow: none;
+            border-radius: 0;
+            background-color: white;
+            z-index: 100;
+            width: 100%
+        }
+        .wrap_r{
+            width: 10px;
+            height: 100%;
+            background-color: white;
+            z-index: 100;
+            position: absolute;
+            right: 0;
+            box-shadow: none;
+            border-radius: 0
+        }
+        .grad{    width: 100%;
+    position: absolute;
+    height: 15px;
+    z-index: 1000000;
+    pointer-events: none;
+    opacity: 0.8;
+        }
+    .bot .img_wrap{
+        /*top:200px;*/
+        z-index: -1;
+        background: linear-gradient(transparent,#000000ad, transparent)
+    }
+    .top_grad{
+    background: linear-gradient(transparent,#ffffff 30%, transparent);
+    height: 15px;
+    }
+    .bot_grad{
+        bottom: 0;
+    background: linear-gradient(transparent,#010101);
+    }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $('.wrapper_0 .vir_scroll').css({'width':$('img').outerWidth()/20})
+            $('.wrapper_0 .vir_scroll').css({'height':$('img').outerHeight()/2})
+            var counter = 0
+            var imgWrapSize = 50;
+            $('.wrapper_0').css({'width':imgWrapSize*0.75+'px'})
+            $('.wrapper_0').css({'height':imgWrapSize*3+'px'})
+            var colCount = 10
+            console.log(colCount)
+            var rowCount = 8
+            var rec_array_1,rec_array_2;
+            var original_pos_array = Array(colCount*rowCount)
+            var target_pos_1_array = Array(colCount*rowCount)
+            var target_pos_2_array = Array(colCount*rowCount)
+            var whole_count = 0
+            var top_gap = 300
+    const pattern = [];
+generatePattern(rowCount*2+colCount*2)
+function generatePattern(maxGroups) {
+
+    for (let i = 0; i < maxGroups; i++) {
+        var group = [];
+        if (i % 2 == 0) {
+            for (var m = 0; m <= Math.floor(i/4); m++){
+                group.push(colCount * ((i/2)-m*2)+(2*m+1));
+            }
+        } else {
+            for (var m = 0; m <= Math.floor(i/4); m++){
+                group.push(colCount*rowCount - colCount * ((Math.floor(i/2)+1)-m*2)+(2*m));
+            }
+        }
+
+        pattern.push(group);
+    }
+}
+
+function findNumberInPattern(targetNumber) {
+  for (let i = 0; i < pattern.length; i++) {
+    const subarray = pattern[i];
+    for (let j = 0; j < subarray.length; j++) {
+      if (subarray[j] === targetNumber) {
+        return i; // Return the index of the parent (outer) array
+      }
+    }
+  }
+    return -1; // Number not found
+}
+
+
+
+
+            append_elem()
+            function append_elem(){
+                console.log(pattern)
+
+                for (var i = 0; i < colCount/2; i++) {
+                        var newImgWrap = $('.wrapper_1').first().clone();
+                        var left = i * imgWrapSize*1.414*2;
+                        if(i%2==0){
+                            newImgWrap.addClass('gray')
+                        }
+                        newImgWrap.css({
+                            'left': left + 'px'
+                        });
+                        $('.whole').append(newImgWrap);
+                }
+                for (var i = 0; i < colCount/2; i++) {
+                        var newImgWrap = $('.wrapper_2').first().clone();
+                        var left = i * imgWrapSize*1.414*2;
+                        if(i%2==0){
+                            newImgWrap.addClass('gray')
+                        }
+                        newImgWrap.css({
+                            'left': left + 'px'
+                        });
+                        $('.whole').append(newImgWrap);
+                }
+                for (var i = 0; i < rowCount; i++) {
+                    for (var j = 0; j < colCount; j++) {
+
+                        var newImgWrap = $('.wrapper_0').first().clone();
+
+                        newImgWrap.addClass('rot_group_'+(i*colCount+j)%2+' row_'+i+' col_'+j+' wrap_'+whole_count)
+                        var left = j * imgWrapSize*1.414;
+                        if((i*colCount+j)%2 == 0){
+                            if(i==1){console.log(top)}
+                                                var top = i * imgWrapSize*1.414;
+                                            }else{
+                            if(i==1){console.log(top)}
+                                                var top = i * imgWrapSize*1.414-200;
+                                            }
+
+                        newImgWrap.css({
+                            'left': left + 'px',
+                            'top': top + 'px'
+                        });
+                        $('.whole').append(newImgWrap);
+                        if(findNumberInPattern(whole_count)%4 == 0||findNumberInPattern(whole_count)%4 == 2){
+                            original_pos_array[whole_count] = [newImgWrap.find('img').offset().left,newImgWrap.find('img').offset().top+270]
+                        }else {
+                            original_pos_array[whole_count] = [newImgWrap.find('img').offset().left,newImgWrap.find('img').offset().top+200]
+                        }
+                            newImgWrap.addClass('size_group_'+findNumberInPattern(whole_count))
+                            newImgWrap.find('img').css({
+                                // 'margin-left': -1*original_pos_array[whole_count][0] + 'px',
+                                // 'margin-top': -1*original_pos_array[whole_count][1]+ 'px'
+                            });
+                            newImgWrap.find('.vir_scroll_wrapper').addClass('wrapper_0_vir_scroll_wrapper_'+whole_count)
+                            // newImgWrap.find('.vir_scroll_wrapper').animate({scrollLeft:original_pos_array[whole_count][0]/20},1) 
+                            // newImgWrap.find('.vir_scroll_wrapper').animate({scrollTop:original_pos_array[whole_count][1]/2},1) 
+                        if(i%2 == 0){
+                            newImgWrap.css({
+                                'z-index':(i*colCount+j)
+                            });
+                        }else{
+                            newImgWrap.css({
+                                'z-index':(i*colCount+Math.floor(j/2)*2+(1-j%2))
+                                // 'z-index':(i*colCount+j)
+                            });
+                        }
+
+                        // Append the new .img_wrap element to .wrapper_0
+                        if(i == rowCount-1 && j == colCount-1){
+                            $('.wrapper_0').first().remove()
+                            get_index()
+                        }
+                    whole_count++
+                    }
+                }
+            }
+            function get_index(){
+                for (var i = rowCount - 1; i >= 0; i--) {
+                    for (var j = colCount - 1; j >= 0; j--) {
+                        if(i%2 == 1 && j%2 == 1){
+                            $('.row_'+i+'.col_'+j).addClass('bot')
+                        }else{
+                            $('.row_'+i+'.col_'+j).addClass('top')
+                        }
+                    }
+                }
+                get_rec_array_1()
+            }
+            function get_rec_array_1(){
+                var square_round = [0,0,3800,1400]
+                $('.wrapper').css({'width':square_round[2]+'px'})
+                $('.wrapper').css({'height':square_round[3]+'px'})
+                var original_1 = '\
+                            <rect x="0.1" y="0" class="st0" width="1266.8" height="700"/>\
+                            <rect x="1266.6" y="0" class="st0" width="1266.8" height="700"/>\
+                            <rect x="0.1" y="700" class="st0" width="1266.8" height="700"/>\
+                            <rect x="1266.6" y="700" class="st0" width="1266.8" height="700"/>\
+                            <rect x="2533.3" y="0" class="st0" width="1266.8" height="700"/>\
+                            <rect x="2533.3" y="700" class="st0" width="1266.8" height="700"/>'
+                                rec_array_1 = Array(original_1.split('"/>').length)
+                                for (var i = rec_array_1.length - 1; i >= 0; i--) {
+                                    rec_array_1[i] = Array(4)
+                                    if(original_1.split('<rect')[i].split('x="')[1]){
+                                        rec_array_1[i][0] = parseInt(original_1.split('<rect')[i].split('x="')[1].split('"')[0])
+                                    }else{
+                                        rec_array_1[i][0] = 0
+                                    }
+                                    if(original_1.split('<rect')[i].split('y="')[1]){
+                                        rec_array_1[i][1] = parseInt(original_1.split('<rect')[i].split('y="')[1].split('"')[0])
+                                    }else{
+                                        rec_array_1[i][1] = 0
+                                    }
+                                        if(original_1.split('<rect')[i].split('width="')[1]){
+                                        rec_array_1[i][2] = parseInt(parseInt(original_1.split('<rect')[i].split('width="')[1].split('"')[0]))
+                                    }else{
+                                        rec_array_1[i][2] = 0
+                                    }
+                                        if(original_1.split('<rect')[i].split('height="')[1]){
+                                        rec_array_1[i][3] = parseInt(parseInt(original_1.split('<rect')[i].split('height="')[1].split('"')[0]))
+                                    }else{
+                                        rec_array_1[i][3] = 0
+                                    }
+                                    if(i == 0){
+                                        // rec_array_1.splice(0, 1)
+                                        rec_array_1.splice(0, 1)
+                                        get_rec_array_2()
+                                    }
+                                }
+            }
+            function get_rec_array_2(){
+                var square_round = [0,0,3800,1400]
+                var original_2 = '\
+                                <rect x="0.1" y="0" class="st0" width="760.1" height="350"/>\
+                                <rect x="760" y="0" class="st0" width="760.1" height="350"/>\
+                                <rect x="0.1" y="350" class="st0" width="760.1" height="350"/>\
+                                <rect x="760" y="350" class="st0" width="760.1" height="350"/>\
+                                <rect x="1520.1" y="0" class="st0" width="760.1" height="350"/>\
+                                <rect x="2280" y="0" class="st0" width="760.1" height="350"/>\
+                                <rect x="1520.1" y="350" class="st0" width="760.1" height="350"/>\
+                                <rect x="2280" y="350" class="st0" width="760.1" height="350"/>\
+                                <rect x="0.1" y="699.9" class="st0" width="760.1" height="350"/>\
+                                <rect x="760" y="699.9" class="st0" width="760.1" height="350"/>\
+                                <rect x="0.1" y="1049.9" class="st0" width="760.1" height="350"/>\
+                                <rect x="760" y="1049.9" class="st0" width="760.1" height="350"/>\
+                                <rect x="1520.1" y="699.9" class="st0" width="760.1" height="350"/>\
+                                <rect x="2280" y="699.9" class="st0" width="760.1" height="350"/>\
+                                <rect x="1520.1" y="1049.9" class="st0" width="760.1" height="350"/>\
+                                <rect x="2280" y="1049.9" class="st0" width="760.1" height="350"/>\
+                                <rect x="3040" y="0" class="st0" width="760.1" height="350"/>\
+                                <rect x="3040" y="350" class="st0" width="760.1" height="350"/>\
+                                <rect x="3040" y="699.9" class="st0" width="760.1" height="350"/>\
+                                <rect x="3040" y="1049.9" class="st0" width="760.1" height="350"/>'
+                                rec_array_2 = Array(original_2.split('"/>').length)
+                                for (var i = rec_array_2.length - 1; i >= 0; i--) {
+                                    rec_array_2[i] = Array(4)
+                                    if(original_2.split('<rect')[i].split('x="')[1]){
+                                        rec_array_2[i][0] = parseInt(original_2.split('<rect')[i].split('x="')[1].split('"')[0])
+                                    }else{
+                                        rec_array_2[i][0] = 0
+                                    }
+                                    if(original_2.split('<rect')[i].split('y="')[1]){
+                                        rec_array_2[i][1] = parseInt(original_2.split('<rect')[i].split('y="')[1].split('"')[0])
+                                    }else{
+                                        rec_array_2[i][1] = 0
+                                    }
+                                        if(original_2.split('<rect')[i].split('width="')[1]){
+                                        rec_array_2[i][2] = parseInt(parseInt(original_2.split('<rect')[i].split('width="')[1].split('"')[0]))
+                                    }else{
+                                        rec_array_2[i][2] = 0
+                                    }
+                                        if(original_2.split('<rect')[i].split('height="')[1]){
+                                        rec_array_2[i][3] = parseInt(parseInt(original_2.split('<rect')[i].split('height="')[1].split('"')[0]))
+                                    }else{
+                                        rec_array_2[i][3] = 0
+                                    }
+                                    if(i == 0){
+                                        rec_array_2.splice(0, 1)
+                                        // rec_array_2.splice(0, 1)
+                                        get_target_pos()
+                                        wrap()
+                                    }
+                                }
+            }
+            function wrap(){
+                for (var i = 0; i < (rowCount-1)*2+(colCount-1)*2; i++) {
+                    $("<div class='wrapper_3 rot_group_"+((i+1)%2)+" wrapper_3_"+i+"'><div class='scroll_overlay'></div><div class='vir_scroll_wrapper'><div class='vir_scroll'></div></div></div>").appendTo( '.whole').append($('.size_group_'+i).detach());
+                }
+
+                position_wrap()
+            }
+            function position_wrap(){
+                var margin_top = imgWrapSize*6
+                for (var i = rowCount*2+colCount*2-1; i >= 0; i--) {
+                    $('.wrapper_3_'+i).css({
+                        'margin-left':(top_gap+imgWrapSize)*1.414+'px',
+                        'width':imgWrapSize+'px',
+                        'height':(Math.floor(rowCount/2))*(imgWrapSize*3)+top_gap*2
+                    })
+                    if(i%2==0){
+                        if(i>(rowCount*2+colCount*2-1)-(rowCount-1)*2){
+                            var offset = ((Math.floor(i/2)+1)-(rowCount-1)*2+1)*imgWrapSize
+                            console.log(offset/imgWrapSize)
+                        }else{
+                            var offset = 0
+                        }
+                        if(i%4==0){
+                            $('.wrapper_3_'+i).css({
+                                'top':((offset+0)*1.414)+'px',
+                                'left' : (Math.floor(i/2)-2)*((imgWrapSize)*1.414)-(offset-0)*1.414
+                            })
+                            for (var k = rowCount; k >= 0; k--) {
+                                $('.wrapper_3_'+i).find('.row_'+k).css({
+                                    'top':(((imgWrapSize*2))*k+margin_top-offset*2-200)+'px',
+                                    'left':'0px',
+                                    'transform':'none'
+                                })
+                            }
+                            $('.wrapper_3_'+i).css({
+                                'z-index':i*2+31
+                            })
+                        }else{
+                            $('.wrapper_3_'+i).css({
+                                'top':imgWrapSize/1.414*2+(offset+0)*1.414+'px',
+                                'left' : (Math.floor(i/2)-2)*((imgWrapSize)*1.414)-imgWrapSize/1.414*2-(offset-0)*1.414
+                            })
+                            for (var k = rowCount; k >= 0; k--) {
+                                $('.wrapper_3_'+i).find('.row_'+k).css({
+                                    'top':(((imgWrapSize*2))*k+margin_top-imgWrapSize*2-offset*2-200)+'px',
+                                    'left':'0px',
+                                    'transform':'none'
+                                })
+                            }
+                            $('.wrapper_3_'+i).css({
+                                'z-index':0
+                            })
+                        }
+                    }else{
+                        if(i<(rowCount-1)*2){
+                            var offset = ((rowCount-1)-Math.floor(i/2)-1)*imgWrapSize
+                        }else{
+                            var offset = 0
+                        }
+                        if(i%4==3){
+                            $('.wrapper_3_'+i).css({
+                                'z-index':i*2
+                            })
+                            $('.wrapper_3_'+i).css({
+                                'top':((imgWrapSize)/1.414+(offset*1.414))+'px',
+                                'left' : Math.floor(i/2)*((imgWrapSize)*1.414)-((rowCount+3)*imgWrapSize*1.414+300/1.414)+(imgWrapSize)/1.414+offset*1.414
+                            })
+                            for (var k = rowCount; k >= 0; k--) {
+                                $('.wrapper_3_'+i).find('.row_'+k).css({
+                                    'top':(((imgWrapSize*2))*k+margin_top-imgWrapSize-offset*2)+'px',
+                                    'left':'0px',
+                                    'transform':'none'
+                                })
+                            }
+                        }else{
+                            $('.wrapper_3_'+i).css({
+                                'z-index':100000000
+                            })
+                            $('.wrapper_3_'+i).css({
+                                'top':((imgWrapSize)/1.414*3+offset*1.414)+'px',
+                                'left' : Math.floor(i/2)*((imgWrapSize)*1.414)-((rowCount+3)*imgWrapSize*1.414+300/1.414)+(imgWrapSize)/1.414*3+offset*1.414
+                            })
+                            for (var k = rowCount; k >= 0; k--) {
+                                $('.wrapper_3_'+i).find('.row_'+k).css({
+                                    'top':(((imgWrapSize*2))*k+margin_top-imgWrapSize*3-offset*2)+'px',
+                                    'left':'0px',
+                                    'transform':'none'
+                                })
+                            }
+                        }
+                        
+
+                    }
+
+                }
+            }
+    function get_target_pos(){
+        for (var k = original_pos_array.length - 1; k >= 0; k--) {
+                    for (var i = rec_array_1.length - 1; i >= 0; i--) {
+                        if(
+                        rec_array_1[i][0]<original_pos_array[k][0]+((top_gap*1.414)) &&
+                        (parseInt(rec_array_1[i][0]) + parseInt(rec_array_1[i][2]))>original_pos_array[k][0]+((top_gap*1.414)) &&
+                        rec_array_1[i][1]<original_pos_array[k][1]+((top_gap*1.414)) &&
+                        (parseInt(rec_array_1[i][1]) + parseInt(rec_array_1[i][3]))>original_pos_array[k][1]+((top_gap*1.414))){
+                            // if(i == 0){
+                            target_pos_1_array[k] = [
+                                (((original_pos_array[k][0]-rec_array_1[i][0])/rec_array_1[i][2])*3800)+(top_gap*1.414)*2,
+                                (((original_pos_array[k][1]-rec_array_1[i][1])/rec_array_1[i][3])*1400)+(top_gap*1.414)*2
+                                ]
+
+                            // }
+                            // else{
+                            // target_pos_1_array[k] = [0,0]
+                                
+                            // }
+                        }
+                    }
+                    for (var i = rec_array_2.length - 1; i >= 0; i--) {
+                        if(
+                        rec_array_2[i][0]<original_pos_array[k][0]+((top_gap*1.414)) &&
+                        (parseInt(rec_array_2[i][0]) + parseInt(rec_array_2[i][2]))>original_pos_array[k][0]+((top_gap*1.414)) &&
+                        rec_array_2[i][1]<original_pos_array[k][1]+((top_gap*1.414)) &&
+                        (parseInt(rec_array_2[i][1]) + parseInt(rec_array_2[i][3]))>original_pos_array[k][1]+((top_gap*1.414))){
+                            target_pos_2_array[k] = [
+                                (((original_pos_array[k][0]-rec_array_2[i][0])/rec_array_2[i][2])*3800)+(top_gap*1.414)*3,
+                                (((original_pos_array[k][1]-rec_array_2[i][1])/rec_array_2[i][3])*1400)+(top_gap*1.414)*3
+                                ]
+                        }
+                    }
+                    if(k == 0){
+                        console.log(target_pos_1_array)
+                        for (var i = target_pos_1_array.length - 1; i >= 0; i--) {
+                            if(!target_pos_1_array[i]){
+                                target_pos_1_array[i] = [Math.floor(Math.random()*imgWrapSize),Math.floor(Math.random()*imgWrapSize)]
+                            }
+                        }
+                        for (var i = target_pos_2_array.length - 1; i >= 0; i--) {
+                            if(!target_pos_2_array[i]){
+                                target_pos_2_array[i] = [Math.floor(Math.random()*imgWrapSize),Math.floor(Math.random()*imgWrapSize)]
+                            }
+                        }
+                $('.wrapper_0').css({'margin-top':imgWrapSize*-0.1+'px'})
+                    setTimeout(function(){
+                        scroll_func()
+                    },1000)
+       
+                    }
+        }
+    }
+    var init_ani_counter = 0
+    var init_ani_array = []
+    function scroll_func(){
+        $('.whole').css({'left':'50px'})
+        $('.whole').css({'top':'50px'})
+        $('.wrapper_3>.vir_scroll_wrapper').animate({scrollTop:800},100) 
+        for (var i = original_pos_array.length - 1; i >= 0; i--) {
+            $('.wrapper_0_vir_scroll_wrapper_'+i).animate({scrollLeft:original_pos_array[i][0]/20},100)  
+            $('.wrapper_0_vir_scroll_wrapper_'+i).animate({scrollTop:original_pos_array[i][1]/2},100) 
+             $('.wrapper_0_vir_scroll_wrapper_'+original_pos_array[i]).siblings('.img_wrap').find('img').css({
+              'margin-top': -1*original_pos_array[i][1] + 'px',
+              'margin-left': -1*original_pos_array[i][0] + 'px'
+            });
+        }
+        setTimeout(function(){
+            // init_ani()
+        },1000)
+
+
+        $('.wrapper_0>.vir_scroll_wrapper').on('scroll', function() {
+            var scrollLeft = $(this).scrollLeft();
+            var scrollTop = $(this).scrollTop();
+            $(this).siblings('.img_wrap').find('img').css({
+              'margin-top': -1*scrollTop*2 + 'px',
+              'margin-left': -1*scrollLeft*20 + 'px'
+            });
+        })
+        $('.wrapper_3>.vir_scroll_wrapper').on('scroll', function() {
+            var scrollTop = $(this).scrollTop();
+            $(this).parent().find('.wrapper_0').css({
+              'margin-top': -1*(scrollTop-800) + 'px'
+            });
+        })
+    }
+    function init_ani(){
+        init_ani_counter++
+        if(init_ani_counter<10){
+            init_ani_array.push(Math.floor(Math.random()*original_pos_array.length-1))
+            var value1 = Math.floor(Math.random()*200)/20
+            var value2 = Math.floor(Math.random()*200)/2
+            $('.wrapper_0_vir_scroll_wrapper_'+init_ani_array[init_ani_array.length-1]).animate({scrollLeft:value1},1000)  
+            $('.wrapper_0_vir_scroll_wrapper_'+init_ani_array[init_ani_array.length-1]).animate({scrollTop:value2},1000) 
+             $('.wrapper_0_vir_scroll_wrapper_'+original_pos_array[init_ani_array[init_ani_array.length-1]]).siblings('.img_wrap').find('img').css({
+              'margin-top': -1*value1 + 'px',
+              'margin-left': -1*value2 + 'px'
+            });
+             $('.wrapper_3').eq(init_ani_array[init_ani_array.length-1]%$('.wrapper_3').length).children('.vir_scroll_wrapper').animate({scrollTop:(value1*100+800)},1000) 
+             console.log((value1/100))
+            init_ani_array.push(Math.floor(Math.random()*original_pos_array.length-1))
+            var value1 = Math.floor(Math.random()*200)/20
+            var value2 = Math.floor(Math.random()*200)/2
+            $('.wrapper_0_vir_scroll_wrapper_'+init_ani_array[init_ani_array.length-1]).animate({scrollLeft:value1},1000)  
+            $('.wrapper_0_vir_scroll_wrapper_'+init_ani_array[init_ani_array.length-1]).animate({scrollTop:value2},1000) 
+             $('.wrapper_0_vir_scroll_wrapper_'+original_pos_array[init_ani_array[init_ani_array.length-1]]).siblings('.img_wrap').find('img').css({
+              'margin-top': -1*value1 + 'px',
+              'margin-left': -1*value2 + 'px'
+            });
+             $('.wrapper_3').eq(init_ani_array[init_ani_array.length-1]%$('.wrapper_3').length).children('.vir_scroll_wrapper').animate({scrollTop:(value1*100+800)},1000) 
+            init_ani_array.push(Math.floor(Math.random()*original_pos_array.length-1))
+            var value1 = Math.floor(Math.random()*200)/20
+            var value2 = Math.floor(Math.random()*200)/2
+            $('.wrapper_0_vir_scroll_wrapper_'+init_ani_array[init_ani_array.length-1]).animate({scrollLeft:value1},1000)  
+            $('.wrapper_0_vir_scroll_wrapper_'+init_ani_array[init_ani_array.length-1]).animate({scrollTop:value2},1000) 
+             $('.wrapper_0_vir_scroll_wrapper_'+original_pos_array[init_ani_array[init_ani_array.length-1]]).siblings('.img_wrap').find('img').css({
+              'margin-top': -1*value1 + 'px',
+              'margin-left': -1*value2 + 'px'
+            });
+             $('.wrapper_3').eq(init_ani_array[init_ani_array.length-1]%$('.wrapper_3').length).children('.vir_scroll_wrapper').animate({scrollTop:(value1*100+800)},1000) 
+         }else{
+            $('.wrapper_0_vir_scroll_wrapper_'+init_ani_array[(init_ani_counter-10)%init_ani_array.length]).animate({scrollLeft:original_pos_array[init_ani_array[(init_ani_counter-10)%init_ani_array.length]][0]/20},1000)  
+            $('.wrapper_0_vir_scroll_wrapper_'+init_ani_array[(init_ani_counter-10)%init_ani_array.length]).animate({scrollTop:original_pos_array[init_ani_array[(init_ani_counter-10)%init_ani_array.length]][1]/2},1000) 
+             $('.wrapper_0_vir_scroll_wrapper_'+original_pos_array[init_ani_array[init_ani_counter-10]]).siblings('.img_wrap').find('img').css({
+              'margin-top': -1*original_pos_array[init_ani_array[(init_ani_counter-10)%init_ani_array.length]][1] + 'px',
+              'margin-left': -1*original_pos_array[init_ani_array[(init_ani_counter-10)%init_ani_array.length]][0] + 'px'
+            });
+        $('.wrapper_3').eq((init_ani_counter-10)%$('.wrapper_3').length).children('.vir_scroll_wrapper').animate({scrollTop:800},2000) 
+            $('.wrapper_0_vir_scroll_wrapper_'+init_ani_array[((init_ani_counter-10)+10)%init_ani_array.length]).animate({scrollLeft:original_pos_array[init_ani_array[((init_ani_counter-10)+10)%init_ani_array.length]][0]/20},1000)  
+            $('.wrapper_0_vir_scroll_wrapper_'+init_ani_array[((init_ani_counter-10)+10)%init_ani_array.length]).animate({scrollTop:original_pos_array[init_ani_array[((init_ani_counter-10)+10)%init_ani_array.length]][1]/2},1000) 
+             $('.wrapper_0_vir_scroll_wrapper_'+original_pos_array[init_ani_array[(init_ani_counter-10)+10]]).siblings('.img_wrap').find('img').css({
+              'margin-top': -1*original_pos_array[init_ani_array[((init_ani_counter-10)+10)%init_ani_array.length]][1] + 'px',
+              'margin-left': -1*original_pos_array[init_ani_array[((init_ani_counter-10)+10)%init_ani_array.length]][0] + 'px'
+            });
+        $('.wrapper_3').eq(((init_ani_counter-10)+10)%$('.wrapper_3').length).children('.vir_scroll_wrapper').animate({scrollTop:800},2000) 
+        console.log(init_ani_array[((init_ani_counter-10)+20)%init_ani_array.length])
+            $('.wrapper_0_vir_scroll_wrapper_'+init_ani_array[((init_ani_counter-10)+20)%init_ani_array.length]).animate({scrollLeft:original_pos_array[init_ani_array[((init_ani_counter-10)+20)%init_ani_array.length]][0]/20},1000)  
+            $('.wrapper_0_vir_scroll_wrapper_'+init_ani_array[((init_ani_counter-10)+20)%init_ani_array.length]).animate({scrollTop:original_pos_array[init_ani_array[((init_ani_counter-10)+20)%init_ani_array.length]][1]/2},1000) 
+             $('.wrapper_0_vir_scroll_wrapper_'+original_pos_array[init_ani_array[(init_ani_counter-10)+20]]).siblings('.img_wrap').find('img').css({
+              'margin-top': -1*original_pos_array[init_ani_array[((init_ani_counter-10)+20)%init_ani_array.length]][1] + 'px',
+              'margin-left': -1*original_pos_array[init_ani_array[((init_ani_counter-10)+20)%init_ani_array.length]][0] + 'px'
+            });
+        $('.wrapper_3').eq(((init_ani_counter-10)+20)%$('.wrapper_3').length).children('.vir_scroll_wrapper').animate({scrollTop:800},2000) 
+         }
+        setTimeout(function(){
+            init_ani()
+        },1000)
+    }
+function paddy(num, padlen, padchar) {
+    var pad_char = typeof padchar !== 'undefined' ? padchar : '0';
+    var pad = new Array(1 + padlen).join(pad_char);
+    return (pad + num).slice(-pad.length);
+}
+function animate_bg(counter){
+    console.log('******')
+        jQuery('.vir_scroll_wrapper').scroll(function(event) {
+            console.log(jQuery(this).scrollTop())
+        })
+    setTimeout(function(){
+        animate_bg(counter+4)
+    },1)
+}
+function easeInSine(x){
+  return x ;
+}
+        });
+    </script>
+</head>
+<body>
+    <div class="whole">
+        <div class="wrapper_1">
+                <div class="wrap wrap_b">
+                    <div class="scroll"></div>
+                </div>
+                <div class="wrap wrap_r">
+                    <div class="scroll"></div>
+                </div>
+        </div>
+        <div class="wrapper_2">
+                <div class="wrap wrap_b">
+                    <div class="scroll"></div>
+                </div>
+                <div class="wrap wrap_r">
+                    <div class="scroll"></div>
+                </div>
+        </div>
+        <div class="wrapper_0">
+                <div class="top_grad grad"></div>
+                <div class="bot_grad grad"></div>
+            <div class="vir_scroll_wrapper">
+            <div class="vir_scroll"></div>
+            </div>
+            <div class="img_wrap">
+                <div class="img_wrap_inner">
+                    <img class="bg bg_223" src="IMG_0788.png" >
+                </div>
+            </div>
+    </div>
+</body>
+</html>

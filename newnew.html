@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        *{
+            overflow: hidden;
+        }
+        body{
+    /*background: linear-gradient(black, #44444454);*/
+    height: 100vh;
+background: black}
+    .whole{
+    width: 4460px;
+    height: 14;
+    height: 1080px;
+    overflow: visible;
+    top: 320px;
+    position: absolute;
+    }
+    .row_0.col_1,
+    .row_0.col_2,
+    .row_0.col_5,
+    .row_0.col_8,
+    .row_0.col_11,
+    .row_0.col_20,
+    .row_0.col_23,
+    .row_0.col_26,
+    .row_0.col_25,
+    .row_0.col_29,
+    .row_5.col_2,
+    .row_5.col_5,
+    .row_5.col_8,
+    .row_5.col_11,
+    .row_5.col_20,
+    .row_5.col_23,
+    .row_5.col_26,
+    .row_5.col_29{
+        display: none;
+    }
+    .wrap_r .scroll{  background:gray;
+  height: 45%;
+  width: 80%;
+  position: absolute;
+  left: 10%;
+  border-radius: 100px;
+transition: 1s}
+    .wrap_b .scroll{  background: gray;
+  width: 45%;
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  border-radius: 100px;
+transition: 1s}
+
+
+
+
+        .wrapper_0{
+            z-index: 10;
+    width: 80px;
+    height: 300px;
+    position: absolute;
+    background-color: black;
+    border-radius: 5px;
+    box-shadow:0vh 0vh 30px black;
+    transition:1s;
+        }
+        .wrapper_1{
+    width: 100px;
+    height: 1980px;
+    background: #ff5305d4;
+    transform: rotate(-45deg);
+    transform-origin: left top;
+    position: absolute;
+    top: -141.4px;
+    z-index: -1
+}
+
+        .wrapper_2{
+    width: 100px;
+    height: 1980px;
+    background: #878febb3;
+    transform: rotate(45deg);
+    transform-origin: left top;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    box-shadow: 0vh 0vh 50px black
+}
+.gray{
+    background: #1e1e1eeb;
+}
+
+     .size_group_0{
+            width: 100px;
+        }
+        /*가장아래에 : 
+        row1 col1
+        row3 col9
+        row3 col11
+        row3 col13
+        ..
+        두번째아래...
+        가장 위..
+
+        */
+        img{position: absolute;}
+        .size_group_1,
+        .size_group_9,
+        .size_group_12,
+        .size_group_15,
+        .size_group_17,
+        .size_group_19,
+        .size_group_24{
+            width: 100px;
+        }
+        .size_group_2,
+        .size_group_6,
+        .size_group_7,
+        .size_group_10,
+        .size_group_22,
+        .size_group_16,
+        .size_group_17,
+        .size_group_20{
+            width: 45px;
+        }
+        .size_group_12,
+        .size_group_16,
+        .size_group_17,
+        .size_group_20,
+        .size_group_22{
+            width: 65px;
+        }
+           /*
+        .size_group_3{
+            width: 140px;
+        }
+        .size_group_4{
+            width: 160px;
+        }*/
+        /*.wid_group_1{
+            width: 200px;
+        }
+        .wid_group_2{
+            width: 250px;
+        }
+        .wid_group_3{
+            width: 300px;
+        }*/
+        .rot_group_0{
+            transform-origin: left top;
+            transform: rotate(-45deg) ;
+        }
+        .rot_group_1{
+            transform-origin:left top;
+            transform: rotate(45deg) ;
+        }
+        .img_wrap{
+            width: 100%;
+            height: 300px;
+    overflow: hidden;
+    position: absolute;
+        }
+        .img_wrap_inner{
+    position: absolute;
+    z-index: 0;
+    /* transform-origin: left top; */
+    left: 50%;
+    top: 50%;
+            width: 600%;
+            height: 600px;
+}
+img{
+    width: 4600px;
+    height: auto;
+    /*transition: 2s;*/
+    position: absolute;
+    /*top: -300px*/
+}
+.bot.wrapper_0{
+    height: 360px;
+    z-index: -1 !important
+    /*margin-top: -30px;*/
+    /*transform-origin: center 30px*/
+}
+.rot_group_0 .img_wrap_inner{
+    transform:translate(-50%, -50%)  rotate(45deg);
+}
+.rot_group_1 .img_wrap_inner{
+    transform:translate(-50%, -50%)  rotate(-45deg);
+}
+        .wrap_b{
+            height: 10px;
+            position: absolute;
+            bottom: 0;
+            box-shadow: none;
+            border-radius: 0;
+            background-color: white;
+            z-index: 100;
+            width: 100%
+        }
+        .wrap_r{
+            width: 10px;
+            height: 100%;
+            background-color: white;
+            z-index: 100;
+            position: absolute;
+            right: 0;
+            box-shadow: none;
+            border-radius: 0
+        }
+        .grad{    width: 100%;
+    position: absolute;
+    height: 30px;
+    z-index: 1000;
+    opacity: 0.65;
+        }
+        .bot_grad{
+    bottom: 0;
+    transform: rotate(180deg);
+    box-shadow: inset 0vh 1.3vh 0.65vh #0000009e;
+}
+    .bot .img_wrap{
+        /*top:200px;*/
+        z-index: -1
+    }
+    .top_grad{
+    box-shadow: inset 0vh 1.3vh 0.65vh #ffffffc4, inset 0vh 0.8vh 0.35vh #000000bf;
+    mix-blend-mode: hard-light;
+    }
+    </style>
+    <script>
+        $(document).ready(function () {
+            var counter = 0
+            var colCount = Math.floor(4600 / (100*1.414)); // Number of columns
+            var rowCount = Math.floor(900 / (100*1.414)); // Number of rows
+            var imgWrapWidth = 100;
+            var imgWrapHeight = 100;
+            var rec_array_1,rec_array_2;
+            var original_pos_array = Array(colCount*rowCount)
+            var target_pos_1_array = Array(colCount*rowCount)
+            var target_pos_2_array = Array(colCount*rowCount)
+            var whole_count = 0
+            append_elem()
+            function append_elem(){
+
+                for (var i = 0; i < colCount/2; i++) {
+                        var newImgWrap = $('.wrapper_1').first().clone();
+                        var left = i * imgWrapWidth*1.414*2;
+                        if(i%2==0){
+                            newImgWrap.addClass('gray')
+                        }
+                        newImgWrap.css({
+                            'left': left + 'px'
+                        });
+                        $('.whole').append(newImgWrap);
+                }
+                for (var i = 0; i < colCount/2; i++) {
+                        var newImgWrap = $('.wrapper_2').first().clone();
+                        var left = i * imgWrapWidth*1.414*2;
+                        if(i%2==0){
+                            newImgWrap.addClass('gray')
+                        }
+                        newImgWrap.css({
+                            'left': left + 'px'
+                        });
+                        $('.whole').append(newImgWrap);
+                }
+                for (var i = 0; i < rowCount; i++) {
+                    for (var j = 0; j < colCount; j++) {
+
+                        // Create a new .img_wrap element and set its position
+                        var newImgWrap = $('.wrapper_0').first().clone();
+                        // newImgWrap.find('img').attr('src','img/sky_1.jpg')
+
+                        newImgWrap.addClass('rot_group_'+(i*colCount+j)%2+' row_'+i+' col_'+j)
+                        var left = j * imgWrapWidth*1.414;
+                        var top = i * imgWrapHeight*1.414;
+                        newImgWrap.css({
+                            'left': left + 'px',
+                            'top': top + 'px'
+                        });
+                        $('.whole').append(newImgWrap);
+                        original_pos_array[whole_count] = [newImgWrap.find('img').offset().left,newImgWrap.find('img').offset().top]
+
+                        newImgWrap.addClass('wrap_'+whole_count)
+                        if((i*colCount+j)%2 == 0){
+                            console.log('!'+(((j-i)+5)%colCount))
+                            newImgWrap.addClass('size_group_'+((j-i)+5)%colCount)
+                        }else{
+                            console.log('*'+((i+j+3)%colCount))
+                            newImgWrap.addClass('size_group_'+(i+j+3)%colCount)
+                        }
+
+                        // if((i*colCount+j)%2==0){
+                            newImgWrap.find('img').css({
+                                'margin-left': -1*original_pos_array[whole_count][0] + 'px',
+                                'margin-top': -1*original_pos_array[whole_count][1]+ 'px'
+                            });
+                        if(i%2 == 0){
+                            newImgWrap.css({
+                                'z-index':(i*colCount+j)
+                            });
+                        }else{
+                            newImgWrap.css({
+                                'z-index':(i*colCount+Math.floor(j/2)*2+(1-j%2))
+                                // 'z-index':(i*colCount+j)
+                            });
+                        }
+
+                        // Append the new .img_wrap element to .wrapper_0
+                        if(i == rowCount-1 && j == colCount-1){
+                            $('.wrapper_0').first().remove()
+                            get_index()
+                        }
+                    whole_count++
+                    }
+                }
+            }
+            function get_index(){
+                        for (var i = 50; i >= 0; i--) {
+                            console.log($('.size_group_25').length)
+                        }
+                for (var i = rowCount - 1; i >= 0; i--) {
+                    for (var j = colCount - 1; j >= 0; j--) {
+                        if(i%2 == 1 && j%2 == 1){
+                            $('.row_'+i+'.col_'+j).addClass('bot')
+                        }else{
+                            $('.row_'+i+'.col_'+j).addClass('top')
+                        }
+                    }
+                }
+                get_rec_array_1()
+            }
+            function get_rec_array_1(){
+                var square_round = [0,0,3800,1400]
+                $('.wrapper').css({'width':square_round[2]+'px'})
+                $('.wrapper').css({'height':square_round[3]+'px'})
+                var original_1 = '\
+<rect x="0.1" y="0" class="st0" width="1266.8" height="700"/>\
+<rect x="1266.6" y="0" class="st0" width="1266.8" height="700"/>\
+<rect x="0.1" y="700" class="st0" width="1266.8" height="700"/>\
+<rect x="1266.6" y="700" class="st0" width="1266.8" height="700"/>\
+<rect x="2533.3" y="0" class="st0" width="1266.8" height="700"/>\
+<rect x="2533.3" y="700" class="st0" width="1266.8" height="700"/>'
+                                rec_array_1 = Array(original_1.split('"/>').length)
+                                for (var i = rec_array_1.length - 1; i >= 0; i--) {
+                                    rec_array_1[i] = Array(4)
+                                    if(original_1.split('<rect')[i].split('x="')[1]){
+                                        rec_array_1[i][0] = parseInt(original_1.split('<rect')[i].split('x="')[1].split('"')[0])
+                                    }else{
+                                        rec_array_1[i][0] = 0
+                                    }
+                                    if(original_1.split('<rect')[i].split('y="')[1]){
+                                        rec_array_1[i][1] = parseInt(original_1.split('<rect')[i].split('y="')[1].split('"')[0])
+                                    }else{
+                                        rec_array_1[i][1] = 0
+                                    }
+                                        if(original_1.split('<rect')[i].split('width="')[1]){
+                                        rec_array_1[i][2] = parseInt(parseInt(original_1.split('<rect')[i].split('width="')[1].split('"')[0]))
+                                    }else{
+                                        rec_array_1[i][2] = 0
+                                    }
+                                        if(original_1.split('<rect')[i].split('height="')[1]){
+                                        rec_array_1[i][3] = parseInt(parseInt(original_1.split('<rect')[i].split('height="')[1].split('"')[0]))
+                                    }else{
+                                        rec_array_1[i][3] = 0
+                                    }
+                                    if(i == 0){
+                                        // rec_array_1.splice(0, 1)
+                                        rec_array_1.splice(0, 1)
+                                        get_rec_array_2()
+                                    }
+                                }
+            }
+            function get_rec_array_2(){
+                var square_round = [0,0,3800,1400]
+                var original_2 = '\
+<rect x="0.1" y="0" class="st0" width="760.1" height="350"/>\
+<rect x="760" y="0" class="st0" width="760.1" height="350"/>\
+<rect x="0.1" y="350" class="st0" width="760.1" height="350"/>\
+<rect x="760" y="350" class="st0" width="760.1" height="350"/>\
+<rect x="1520.1" y="0" class="st0" width="760.1" height="350"/>\
+<rect x="2280" y="0" class="st0" width="760.1" height="350"/>\
+<rect x="1520.1" y="350" class="st0" width="760.1" height="350"/>\
+<rect x="2280" y="350" class="st0" width="760.1" height="350"/>\
+<rect x="0.1" y="699.9" class="st0" width="760.1" height="350"/>\
+<rect x="760" y="699.9" class="st0" width="760.1" height="350"/>\
+<rect x="0.1" y="1049.9" class="st0" width="760.1" height="350"/>\
+<rect x="760" y="1049.9" class="st0" width="760.1" height="350"/>\
+<rect x="1520.1" y="699.9" class="st0" width="760.1" height="350"/>\
+<rect x="2280" y="699.9" class="st0" width="760.1" height="350"/>\
+<rect x="1520.1" y="1049.9" class="st0" width="760.1" height="350"/>\
+<rect x="2280" y="1049.9" class="st0" width="760.1" height="350"/>\
+<rect x="3040" y="0" class="st0" width="760.1" height="350"/>\
+<rect x="3040" y="350" class="st0" width="760.1" height="350"/>\
+<rect x="3040" y="699.9" class="st0" width="760.1" height="350"/>\
+<rect x="3040" y="1049.9" class="st0" width="760.1" height="350"/>'
+                                rec_array_2 = Array(original_2.split('"/>').length)
+                                for (var i = rec_array_2.length - 1; i >= 0; i--) {
+                                    rec_array_2[i] = Array(4)
+                                    if(original_2.split('<rect')[i].split('x="')[1]){
+                                        rec_array_2[i][0] = parseInt(original_2.split('<rect')[i].split('x="')[1].split('"')[0])
+                                    }else{
+                                        rec_array_2[i][0] = 0
+                                    }
+                                    if(original_2.split('<rect')[i].split('y="')[1]){
+                                        rec_array_2[i][1] = parseInt(original_2.split('<rect')[i].split('y="')[1].split('"')[0])
+                                    }else{
+                                        rec_array_2[i][1] = 0
+                                    }
+                                        if(original_2.split('<rect')[i].split('width="')[1]){
+                                        rec_array_2[i][2] = parseInt(parseInt(original_2.split('<rect')[i].split('width="')[1].split('"')[0]))
+                                    }else{
+                                        rec_array_2[i][2] = 0
+                                    }
+                                        if(original_2.split('<rect')[i].split('height="')[1]){
+                                        rec_array_2[i][3] = parseInt(parseInt(original_2.split('<rect')[i].split('height="')[1].split('"')[0]))
+                                    }else{
+                                        rec_array_2[i][3] = 0
+                                    }
+                                    if(i == 0){
+                                        rec_array_2.splice(0, 1)
+                                        // rec_array_2.splice(0, 1)
+                                        get_target_pos()
+                                        // wrap()
+                                        console.log(rec_array_2)
+                                    }
+                                }
+            }
+            function wrap(){
+                $('.size_group_1.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_0'></div>" );
+                $('.size_group_2.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_1'></div>" );
+                $('.size_group_3.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_2'></div>" );
+                $('.size_group_4.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_3'></div>" );
+                $('.size_group_5.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_4'></div>" );
+                $('.size_group_6.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_5'></div>" );
+                $('.size_group_7.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_6'></div>" );
+                $('.size_group_8.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_7'></div>" );
+                $('.size_group_9.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_8'></div>" );
+                $('.size_group_10.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_9'></div>" );
+                $('.size_group_11.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_10'></div>" );
+                $('.size_group_12.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_11'></div>" );
+                $('.size_group_13.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_12'></div>" );
+                $('.size_group_14.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_13'></div>" );
+                $('.size_group_15.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_14'></div>" );
+                $('.size_group_16.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_15'></div>" );
+                $('.size_group_17.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_16'></div>" );
+                $('.size_group_18.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_17'></div>" );
+                $('.size_group_19.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_18'></div>" );
+                $('.size_group_20.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_19'></div>" );
+                $('.size_group_21.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_20'></div>" );
+                $('.size_group_22.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_21'></div>" );
+                $('.size_group_23.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_22'></div>" );
+                $('.size_group_24.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_23'></div>" );
+                $('.size_group_25.bot.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_24'></div>" );
+                $('.size_group_3.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_25'></div>" );
+                $('.size_group_7.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_26'></div>" );
+                $('.size_group_11.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_27'></div>" );
+                $('.size_group_15.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_28'></div>" );
+                $('.size_group_19.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_29'></div>" );
+                $('.size_group_23.rot_group_1').wrap( "<div class='wrapper_1 wrapper_1_30'></div>" );
+            }
+    function get_target_pos(){
+        for (var k = original_pos_array.length - 1; k >= 0; k--) {
+                    for (var i = rec_array_1.length - 1; i >= 0; i--) {
+                        if(
+                        rec_array_1[i][0]<original_pos_array[k][0]+((300*1.414)) &&
+                        (parseInt(rec_array_1[i][0]) + parseInt(rec_array_1[i][2]))>original_pos_array[k][0]+((300*1.414)) &&
+                        rec_array_1[i][1]<original_pos_array[k][1]+((300*1.414)) &&
+                        (parseInt(rec_array_1[i][1]) + parseInt(rec_array_1[i][3]))>original_pos_array[k][1]+((300*1.414))){
+                            // if(i == 0){
+                            target_pos_1_array[k] = [
+                                (((original_pos_array[k][0]-rec_array_1[i][0])/rec_array_1[i][2])*3800)+(300*1.414)*2,
+                                (((original_pos_array[k][1]-rec_array_1[i][1])/rec_array_1[i][3])*1400)+(300*1.414)*2
+                                ]
+
+                            // }
+                            // else{
+                            // target_pos_1_array[k] = [0,0]
+                                
+                            // }
+                        }
+                    }
+                    for (var i = rec_array_2.length - 1; i >= 0; i--) {
+                        if(
+                        rec_array_2[i][0]<original_pos_array[k][0]+((300*1.414)) &&
+                        (parseInt(rec_array_2[i][0]) + parseInt(rec_array_2[i][2]))>original_pos_array[k][0]+((300*1.414)) &&
+                        rec_array_2[i][1]<original_pos_array[k][1]+((300*1.414)) &&
+                        (parseInt(rec_array_2[i][1]) + parseInt(rec_array_2[i][3]))>original_pos_array[k][1]+((300*1.414))){
+                            target_pos_2_array[k] = [
+                                (((original_pos_array[k][0]-rec_array_2[i][0])/rec_array_2[i][2])*3800)+(300*1.414)*3,
+                                (((original_pos_array[k][1]-rec_array_2[i][1])/rec_array_2[i][3])*1400)+(300*1.414)*3
+                                ]
+                        }
+                    }
+                    if(k == 0){
+                        console.log(target_pos_1_array)
+                        for (var i = target_pos_1_array.length - 1; i >= 0; i--) {
+                            if(!target_pos_1_array[i]){
+                                target_pos_1_array[i] = [Math.floor(Math.random()*100),Math.floor(Math.random()*100)]
+                            }
+                        }
+                        for (var i = target_pos_2_array.length - 1; i >= 0; i--) {
+                            if(!target_pos_2_array[i]){
+                                console.log(original_pos_array[i])
+                                target_pos_2_array[i] = [Math.floor(Math.random()*100),Math.floor(Math.random()*100)]
+                            }
+                        }
+                        $('.whole').css({'left':'-300px'})
+                        $('.whole').css({'top':'300px'})
+$('img').css({'transition': '2s'})
+setTimeout(function(){
+                 animate_bg(0)
+},1000)
+       
+                    }
+        }
+    }
+function inner_animate_bg(target,term){
+    target.each(function(){
+            if($(this).hasClass('rot_group_0')){
+                $(this).css({'z-index': '-1'})
+                $(this).css({'transform': 'rotate(-45deg) translateY('+(1.414*300)/4*term+'px'})
+                $(this).find('img').css({'top': -1*(1.414*300)/4*term+'px'})
+                $(this).find('img').css({'left': -1*(1.414*300)/4*term+'px'})
+            }else{
+                $(this).css({'z-index': '-1'})
+                $(this).css({'transform': 'rotate(45deg) translateY('+(1.414*300)/4*term+'px'})
+                $(this).find('img').css({'top': -1*(1.414*300)/4*term+'px'})
+                $(this).find('img').css({'left': (1.414*300)/4*term+'px'})
+            }
+    })
+}
+function scatter_animate_bg(target,counter){
+    target.each(function(){
+            var i =$(this).attr('class').split('wrap_')[1].split(' ')[0]
+        if(counter<=60000){
+            var innercounter = counter-0
+            $(this).find('img').css({
+                    'margin-left': -1*(original_pos_array[i][0]+((target_pos_1_array[i][0]-original_pos_array[i][0])*easeInSine(innercounter/60000))) + 'px',
+                    'margin-top': -1*(original_pos_array[i][1]+((target_pos_1_array[i][1]-original_pos_array[i][1])*easeInSine(innercounter/60000))) + 'px'
+            })
+            console.log(((-1*(original_pos_array[i][0]+((target_pos_1_array[i][0]-original_pos_array[i][0])*easeInSine(innercounter/60000))))/4460)+'%')
+                $(this).find('.wrap_b .scroll').css({'left': ((-1*(original_pos_array[i][0]+((target_pos_1_array[i][0]-original_pos_array[i][0])*easeInSine(innercounter/60000))))/4460)*-100+'%'})
+                $(this).find('.wrap_r .scroll').css({'top': ((-1*(original_pos_array[i][1]+((target_pos_1_array[i][1]-original_pos_array[i][1])*easeInSine(innercounter/60000))))/1080)*-100+'%'})
+            $('img').css({'top':-1*(300+(100)*((60000-innercounter)/60000))+'px'})
+            // $('img').css({'transform':'scale('+(0.85+(0.15)*((60000-innercounter)/60000))+')'})
+        }
+        else if(counter<=120000){
+            var innercounter = counter-60000
+             $(this).find('img').css({
+                    'margin-left': -1*(target_pos_1_array[i][0]+((target_pos_2_array[i][0]-target_pos_1_array[i][0])*easeInSine(innercounter/60000))) + 'px',
+                    'margin-top': -1*(target_pos_1_array[i][1]+((target_pos_2_array[i][1]-target_pos_1_array[i][1])*easeInSine(innercounter/60000))) + 'px'
+            })
+                $(this).find('.wrap_b .scroll').css({'left': ((-1*(target_pos_1_array[i][0]+((target_pos_2_array[i][0]-target_pos_1_array[i][0])*easeInSine(innercounter/60000))))/4460)*-100+'%'})
+                $(this).find('.wrap_r .scroll').css({'top': ((-1*(target_pos_1_array[i][1]+((target_pos_2_array[i][1]-target_pos_1_array[i][1])*easeInSine(innercounter/60000))))/1080)*-100+'%'})
+            $('img').css({'top':-1*(400+(0)*((60000-innercounter)/60000))+'px'})
+            // $('img').css({'transform':'scale('+(0.85+(0.25)*((120000-innercounter)/60000))+')'})
+        }
+        else if(counter<=180000){
+            var innercounter = counter-120000
+             $(this).find('img').css({
+                    'margin-left': -1*(target_pos_2_array[i][0]+((target_pos_1_array[i][0]-target_pos_2_array[i][0])*easeInSine(innercounter/60000))) + 'px',
+                    'margin-top': -1*(target_pos_2_array[i][1]+((target_pos_1_array[i][1]-target_pos_2_array[i][1])*easeInSine(innercounter/60000))) + 'px'
+            })
+                $(this).find('.wrap_b .scroll').css({'left': ((-1*(target_pos_2_array[i][0]+((target_pos_1_array[i][0]-target_pos_2_array[i][0])*easeInSine(innercounter/60000))))/4460)*-100+'%'})
+                $(this).find('.wrap_r .scroll').css({'top': ((-1*(target_pos_2_array[i][1]+((target_pos_1_array[i][1]-target_pos_2_array[i][1])*easeInSine(innercounter/60000))))/1080)*-100+'%'})
+            $('img').css({'top':-1*(400+(0)*((60000-innercounter)/60000))+'px'})
+            // $('img').css({'transform':'scale('+(0.6+(0.2)*((60000+innercounter)/60000))+')'})
+        }
+        else if(counter<=220000){
+            var innercounter = counter-180000
+             $(this).find('img').css({
+                    'margin-left': -1*(target_pos_1_array[i][0]+((original_pos_array[i][0]-target_pos_1_array[i][0])*easeInSine(innercounter/40000))) + 'px',
+                    'margin-top': -1*(target_pos_1_array[i][1]+((original_pos_array[i][1]-target_pos_1_array[i][1])*easeInSine(innercounter/40000))) + 'px'
+            })
+                $(this).find('.wrap_b .scroll').css({'left': ((-1*(target_pos_1_array[i][0]+((original_pos_array[i][0]-target_pos_1_array[i][0])*easeInSine(innercounter/40000))))/4460)*-100+'%'})
+                $(this).find('.wrap_br.scroll').css({'top': ((-1*(target_pos_1_array[i][1]+((original_pos_array[i][1]-target_pos_1_array[i][1])*easeInSine(innercounter/40000))))/1080)*-100+'%'})
+            $('img').css({'top':-1*(300+(-100)*((40000-innercounter)/40000))+'px'})
+             if((0.75+(0.5)*((innercounter)/40000))<0.85){
+                 // $('img').css({'transform':'scale('+(0.75+(0.5)*((innercounter)/60000))+')'})
+             }else{
+                 // $('img').css({'transform':'scale(0.85)'})
+             }
+        }else{
+             $(this).find('img').css({
+                    'margin-left': -1*original_pos_array[i][0] + 'px',
+                    'margin-top': -1*original_pos_array[i][1] + 'px'
+            })
+             $('img').css({'top':-500+'px'})
+        }
+    })
+}
+function whole_animate_bg(target,offset,counter,term,speed){
+    target.each(function(){
+            if((counter)%term<speed){
+                $('.whole').css({'top': (1.414*300)/speed*((counter-offset)%term)+'px'})
+            }else{
+                $('.whole').css({'top': '0px'})
+            }
+    })
+}
+function paddy(num, padlen, padchar) {
+    var pad_char = typeof padchar !== 'undefined' ? padchar : '0';
+    var pad = new Array(1 + padlen).join(pad_char);
+    return (pad + num).slice(-pad.length);
+}
+function animate_bg(counter){
+    if(counter%1250 == 0){
+        if((counter/1250)<187){
+                                $('img').attr('src','img/seq/img'+paddy((counter/1250),3)+'.png')
+                            }else{
+                                $('img').attr('src','img/seq/img187.png')
+                            }
+    }
+    // counter = 0
+    // if(counter%1000 == 0){
+        if(counter%1500 == 1000){
+        inner_animate_bg($('.size_group_1.bot'), ((counter-1000)/1500)%4)
+        inner_animate_bg($('.size_group_2.bot'), ((counter-1000)/1500)%4)
+        inner_animate_bg($('.size_group_3.bot'), ((counter-1000)/1500)%4)
+        inner_animate_bg($('.size_group_4.bot'), ((counter-1000)/1500)%4)
+        inner_animate_bg($('.size_group_8.bot'), ((counter-1000)/1500)%4)
+    }
+        if(counter%500 == 250){
+        inner_animate_bg($('.size_group_9.bot'), ((counter-250)/1000)%4)
+        inner_animate_bg($('.size_group_12.bot'),((counter-250)/1000)%4)
+        inner_animate_bg($('.size_group_13.bot'),((counter-250)/1000)%4)
+        inner_animate_bg($('.size_group_14.bot'),((counter-250)/1000)%4)
+        inner_animate_bg($('.size_group_15.bot'),((counter-250)/1000)%4)
+    }
+        if(counter%500 == 0){
+        inner_animate_bg($('.size_group_5.bot'),(counter/500)%4)
+        inner_animate_bg($('.size_group_6.bot'),(counter/500)%4)
+        inner_animate_bg($('.size_group_7.bot'),(counter/500)%4)
+        inner_animate_bg($('.size_group_10.bot'),(counter/500)%4)
+        inner_animate_bg($('.size_group_11.bot'),(counter/500)%4)
+        inner_animate_bg($('.size_group_16.bot'),(counter/500)%4)
+        inner_animate_bg($('.size_group_17.bot'),(counter/500)%4)
+    }
+        if(counter%1500 == 0){
+        inner_animate_bg($('.size_group_18.bot'),(counter/1500)%4)
+        inner_animate_bg($('.size_group_19.bot'),(counter/1500)%4)
+        inner_animate_bg($('.size_group_20.bot'),(counter/1500)%4)
+        inner_animate_bg($('.size_group_21.bot'),(counter/1500)%4)
+        inner_animate_bg($('.size_group_22.bot'),(counter/1500)%4)
+    }
+
+
+        if(counter%1250 == 1000){
+        inner_animate_bg($('.size_group_1.top'), ((counter-1000)/1500)%4)
+        inner_animate_bg($('.size_group_2.top'), ((counter-1000)/1500)%4)
+        inner_animate_bg($('.size_group_3.top'), ((counter-1000)/1500)%4)
+    }
+        if(counter%250 == 0){
+        inner_animate_bg($('.size_group_14.top'),((counter-250)/1000)%4)
+        inner_animate_bg($('.size_group_15.top'),((counter-250)/1000)%4)
+    }
+        if(counter%250 == 0){
+        inner_animate_bg($('.size_group_10.top'),(counter/250)%4)
+        inner_animate_bg($('.size_group_7.top'), (counter/250)%4)
+        inner_animate_bg($('.size_group_8.top'), (counter/250)%4)
+        inner_animate_bg($('.size_group_9.top'), (counter/250)%4)
+    }
+        if(counter%350 == 0){
+        inner_animate_bg($('.size_group_18.top'),(counter/350)%4)
+        inner_animate_bg($('.size_group_19.top'),(counter/350)%4)
+        inner_animate_bg($('.size_group_20.top'),(counter/350)%4)
+    }
+        if(counter%500 == 100){
+            inner_animate_bg($('.size_group_23.bot'),((counter-100)/500)%4)
+            inner_animate_bg($('.size_group_24.bot'),((counter-100)/500)%4)
+            inner_animate_bg($('.size_group_25.bot'),((counter-100)/500)%4)
+        }
+        if(counter%5000 == 0){
+            scatter_animate_bg($('.size_group_1'),counter)
+            scatter_animate_bg($('.size_group_2'),counter)
+            scatter_animate_bg($('.size_group_3'),counter)
+            scatter_animate_bg($('.size_group_4'),counter)
+            scatter_animate_bg($('.size_group_5'),counter)
+        }
+        if(counter%5000 == 1000){
+            scatter_animate_bg($('.size_group_6'),counter)
+            scatter_animate_bg($('.size_group_7'),counter)
+            scatter_animate_bg($('.size_group_8'),counter)
+            scatter_animate_bg($('.size_group_9'),counter)
+            scatter_animate_bg($('.size_group_10'),counter)
+        }
+        if(counter%5000 == 2000){
+            scatter_animate_bg($('.size_group_11'),counter)
+            scatter_animate_bg($('.size_group_12'),counter)
+            scatter_animate_bg($('.size_group_13'),counter)
+            scatter_animate_bg($('.size_group_14'),counter)
+            scatter_animate_bg($('.size_group_15'),counter)
+        }
+        if(counter%5000 == 3000){
+            scatter_animate_bg($('.size_group_16'),counter)
+            scatter_animate_bg($('.size_group_17'),counter)
+            scatter_animate_bg($('.size_group_18'),counter)
+            scatter_animate_bg($('.size_group_19'),counter)
+            scatter_animate_bg($('.size_group_20'),counter)
+        }
+        if(counter%5000 == 4000){
+            scatter_animate_bg($('.size_group_21'),counter)
+            scatter_animate_bg($('.size_group_22'),counter)
+            scatter_animate_bg($('.size_group_23'),counter)
+            scatter_animate_bg($('.size_group_24'),counter)
+            scatter_animate_bg($('.size_group_25'),counter)
+        }
+    // }
+        // inner_animate_bg($('.size_group_2.bot'),1000,counter,1000,1000)
+        // inner_animate_bg($('.size_group_2.bot') , 200,counter,1000,1000)
+        // inner_animate_bg($('.size_group_3.bot') , 300,counter,1000,1000)
+        // inner_animate_bg($('.size_group_4.bot') , 400,counter,1000,1000)
+        // inner_animate_bg($('.size_group_5.bot') , 500,counter,1000,1000)
+        // inner_animate_bg($('.size_group_6.bot') , 600,counter,1000,1000)
+        // inner_animate_bg($('.size_group_7.bot') , 700,counter,1000,1000)
+        // inner_animate_bg($('.size_group_8.bot') , 800,counter,1000,1000)
+        // inner_animate_bg($('.size_group_9.bot') , 900,counter,1000,1000)
+        // inner_animate_bg($('.size_group_10.bot'),1000,counter,1000,1000)
+        // inner_animate_bg($('.size_group_11.bot'),1100,counter,1000,1000)
+        // inner_animate_bg($('.size_group_12.bot'),1200,counter,1000,1000)
+        // inner_animate_bg($('.size_group_13.bot'),1300,counter,1000,1000)
+        // inner_animate_bg($('.size_group_14.bot'),1400,counter,1000,1000)
+        // inner_animate_bg($('.size_group_15.bot'),1500,counter,1000,1000)
+        // inner_animate_bg($('.size_group_16.bot'),1600,counter,1000,1000)
+        // inner_animate_bg($('.size_group_17.bot'),1700,counter,1000,1000)
+        // inner_animate_bg($('.size_group_18.bot'),1800,counter,1000,1000)
+        // inner_animate_bg($('.size_group_19.bot'),1900,counter,1000,1000)
+        // inner_animate_bg($('.size_group_20.bot'),2000,counter,1000,1000)
+        // inner_animate_bg($('.size_group_21.bot'),2100,counter,1000,1000)
+        // inner_animate_bg($('.size_group_22.bot'),2200,counter,1000,1000)
+        // inner_animate_bg($('.size_group_23.bot'),2300,counter,1000,1000)
+        // inner_animate_bg($('.size_group_24.bot'),2400,counter,1000,1000)
+        // inner_animate_bg($('.size_group_25.bot'),2500,counter,1000,1000)
+    setTimeout(function(){
+        animate_bg(counter+4)
+    },1)
+}
+function easeInSine(x){
+  return x ;
+}
+        });
+    </script>
+</head>
+<body>
+    <div class="whole">
+        <div class="wrapper_1">
+                <div class="wrap wrap_b">
+                    <div class="scroll"></div>
+                </div>
+                <div class="wrap wrap_r">
+                    <div class="scroll"></div>
+                </div>
+        </div>
+        <div class="wrapper_2">
+                <div class="wrap wrap_b">
+                    <div class="scroll"></div>
+                </div>
+                <div class="wrap wrap_r">
+                    <div class="scroll"></div>
+                </div>
+        </div>
+        <div class="wrapper_0">
+                <div class="top_grad grad"></div>
+                <div class="bot_grad grad"></div>
+                <div class="wrap wrap_b">
+                    <div class="scroll"></div>
+                </div>
+                <div class="wrap wrap_r">
+                    <div class="scroll"></div>
+                </div>
+            <div class="img_wrap">
+                <div class="img_wrap_inner">
+                    <img class="bg bg_223" src="img/seq/img000.png" >
+                </div>
+            </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+
+		*{
+			margin: 0;
+			padding: 0
+		}
+		label{
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.arrow{
+			position: fixed;
+			width: 10vh;
+			z-index: 100000000000000000
+		}
+		.arrow_t{
+			left: calc(50% - 5vh);
+			transform: rotate(-90deg);
+			top: 0
+		}
+		.arrow_b{
+			left: calc(50% - 5vh);
+			transform: rotate(90deg);
+			bottom: 0;
+		}
+		.arrow_l{
+			left: 0%;
+			top: calc(50% - 5vh);
+			transform: scaleX(-1);
+		}
+		.arrow_r{
+			right: 0%;
+			top: calc(50% - 5vh)
+		}
+		body,html,.master_wrapper{
+    		overflow: hidden;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0
+		}
+		.master{
+			position: relative;
+		    width: 100%;
+		    height: 100%;
+		}
+		.wrapper{
+			position: absolute;
+		    height: 100vh;
+		    width: 500vh;
+			left: 0;
+			top: 0;
+			pointer-events: none;
+		}
+		.master_wrapper img{
+			position: absolute;
+		}
+		button{
+			z-index: 100000000;
+			position: absolute;
+		}
